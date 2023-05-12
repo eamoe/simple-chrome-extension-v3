@@ -5,3 +5,9 @@ chrome.runtime.onInstalled.addListener(() => {
         name: "Jack"
     });
 });
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    // Check if the web page is fully loaded and it is the actual web page (http)
+    if (changeInfo.status === 'complete' && /^http/.test(tab.url)) {
+    }
+});

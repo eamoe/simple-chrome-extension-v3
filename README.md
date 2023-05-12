@@ -46,6 +46,10 @@ This is an HTML page that is seen when right-clicked on the extension icon.
 
 The comment about in-line JavaScript & CSS is also applied here.
 
-5. The foreground / content scripts
+5. The content script
 
-It is a JavaScript file.
+It is a JavaScript file that is called a content script because it gets embedded into the tab(s) the user is viewing. Think of it like this:
+
+We can monitor all of the tabs the user is viewing. When they go to a site of our choosing, we can inject our content script into that website giving us the ability to control the DOM of that site.
+
+To get our content script to actually embed into the users tab(s) we need to first monitor their browsing experience with the **tabs** API. We do this monitoring in the backround script with **onUpdated** listener.
