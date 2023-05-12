@@ -14,6 +14,12 @@ Also, there are two ways of including the foreground script in a Chrome extensio
 
 - programmatically (which is used in this example).
 
+A key function of the manifest file is defining what the Chrome extension is capable of doing. This gets handled in the permissions properties.
+
+These permissions are APIs that let to do things like store data locally, read which urls the user is looking at.
+
+Host permissions tell the browser which urls the Chrome extension is allowed to interact with.
+
 2. The background script
 
 This is a JavaScript file and serves as the mainframe or hub of Chrome extension. It acts like a back-end environment.
