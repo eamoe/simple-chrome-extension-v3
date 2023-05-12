@@ -90,5 +90,3 @@ The **onMessage** method takes a callback which gives you 3 parameters:
 - *request* - the message being sent
 - *sender* - whose sending the message
 - *sendResponse* - a method that allows you send to send a message back to the original sender
-
-
