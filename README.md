@@ -73,3 +73,22 @@ To send a message from the *background*, *options*, or *pop-up* components to th
 ```js
 chrome.tabs.sendMessage(tabId, "message", function (response));
 ```
+
+One to receive a message:
+
+```js
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    // communication tree
+    // if (request === 'get_name') {
+    //   return "Jack";
+    // }
+});
+```
+
+The **onMessage** method takes a callback which gives you 3 parameters:
+
+- *request* - the message being sent
+- *sender* - whose sending the message
+- *sendResponse* - a method that allows you send to send a message back to the original sender
+
+
