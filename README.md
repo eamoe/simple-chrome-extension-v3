@@ -38,9 +38,13 @@ Once the browser has determined that the user has stopped interacting with the b
 
 This is an HTML page that is displayed when one clickes on the extension icon in the menu bar. It is a front-end of the extension.
 
+The pop-up page behaves exactly like any index.html page with one major difference: it is not allowed to write in-line JavaScript in this file; only attach a script. However, it is possible to write in-line CSS styles (or choose to attach a stylesheet).
+
 4. The options page
 
 This is an HTML page that is seen when right-clicked on the extension icon.
+
+The comment about in-line JavaScript & CSS is also applied here.
 
 5. The foreground / content scripts
 
